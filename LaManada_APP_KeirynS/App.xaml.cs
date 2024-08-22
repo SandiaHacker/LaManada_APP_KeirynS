@@ -1,4 +1,6 @@
-﻿namespace LaManada_APP_KeirynS
+﻿using LaManada_APP_KeirynS.Views;
+
+namespace LaManada_APP_KeirynS
 {
     public partial class App : Application
     {
@@ -6,7 +8,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new LoginPage());
         }
     }
 }

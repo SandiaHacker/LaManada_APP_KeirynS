@@ -1,5 +1,3 @@
-using LaManada_APP_KeirynS.Views;
-
 namespace LaManada_APP_KeirynS.Views;
 
 public partial class LoginPage : ContentPage
@@ -7,8 +5,16 @@ public partial class LoginPage : ContentPage
 	public LoginPage()
 	{
 		InitializeComponent();
-
-		MainPagee = new NavigationPage(new LoginPage());
 		
 	}
+
+    private void SwShowPassword_Toggled(object sender, ToggledEventArgs e)
+    {
+        TxtPassword.IsPassword = true;
+
+        if (SwShowPassword.IsToggled)
+        {
+            TxtPassword.IsPassword = false;
+        }
+    }
 }
